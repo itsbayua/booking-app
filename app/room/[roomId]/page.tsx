@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Room Detail",
 };
 
-export default async function RoomDetailPage({
+export default function RoomDetailPage({
   params,
 }: {
-  params: Promise<{ roomId: string }>;
+  params: { roomId: string };
 }) {
-  const roomId = (await params).roomId;
+  const roomId = params.roomId;
 
   return (
     <div className="mt-16">

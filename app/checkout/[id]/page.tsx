@@ -7,12 +7,8 @@ export const metadata: Metadata = {
   title: "Reservation Summary",
 };
 
-export default async function CheckoutPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const reservationId = (await params).id;
+export default function CheckoutPage({ params }: { params: { id: string } }) {
+  const reservationId = params.id;
 
   return (
     <div className="max-w-screen-xl px-4 mx-auto py-20 mt-12">

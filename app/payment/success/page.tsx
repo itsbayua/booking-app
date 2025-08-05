@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Payment Successful",
 };
 
-export default async function PaymentSuccessPage({
+export default function PaymentSuccessPage({
   searchParams,
 }: {
   searchParams: { transaction_status: string };
 }) {
-  const paymentStatus = (await searchParams).transaction_status;
+  const paymentStatus = searchParams.transaction_status;
 
   if (paymentStatus === "pending") {
     redirect("payment/pending");

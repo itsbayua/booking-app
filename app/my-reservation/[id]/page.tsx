@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Reservation Detail",
 };
 
-export default async function MyReservationDetail({
+export default function MyReservationDetail({
   params,
 }: {
   params: { id: string };
 }) {
-  const reservationId = (await params).id;
+  const reservationId = params.id;
 
   return (
     <div className="min-h-screen bg-slate-50">
